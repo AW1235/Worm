@@ -13,3 +13,17 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+let mysql = require('mysql');
+
+let con = mysql.createConnection({
+  host: "localhost",
+  port: '3306',
+  user: "root",
+  password: "$i11yGoofyC@t$"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
